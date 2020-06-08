@@ -15,7 +15,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 @Order(TestFilter.ORDER)
 public class TestFilter extends OncePerRequestFilter {
 
-    public static final int ORDER = Ordered.LOWEST_PRECEDENCE - 10; // - 10 to allow applications/ libraries to register filters after this one
+    public static final int ORDER = Ordered.LOWEST_PRECEDENCE - 10;  // - 10 to allow applications/ libraries to register filters after this one
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
