@@ -15,14 +15,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
-				.antMatchers("/{username}/*").access(pathVariable("/{username}/*", "username") + "== authentication.name")
-				.anyRequest().authenticated()
+				.antMatchers("/secured/**").authenticated()
 				.and()
 			.httpBasic();
-	}
-
-	private String pathVariable(String pattern, String name) {
-		return "@pathVariableEvaluator.extract(request,'"+pattern+"')['"+ name +"']";
 	}
 
 	@Autowired
