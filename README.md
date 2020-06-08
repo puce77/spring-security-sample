@@ -13,6 +13,6 @@ To run the sample application you must have Maven 3 installed. After doing so yo
 
     mvn package spring-boot:run 
 
-* Open http://localhost:8080/user/hello or http://localhost:8080/admin/hello in your browser
+* Open http://localhost:8080/secured/echoes/hello in your browser
 * You can log in with user/password or admin/password (depending on the chosen URL)
 * To stop the container use Ctrl-C from the commandline
